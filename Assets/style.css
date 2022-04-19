@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary: #232524;
+    --secondary: #191A1E;
+    --text-primary: #fbfbfb;
+    --text-scondary: #c0bfbf;
+}
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 63.5%;
+}
+header{
+    width: 25%;
+    min-width: 320px;
+    height: 100vh;
+    position: fixed;
+    background-color: var(--primary);
+    display: grid;
+    align-content: center;
+    padding: 0 10px;
+}
+header .top{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.top h1{
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 3rem;
+}
+.top p{
+    color: var(--text-scondary);
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+header .fotoperfil{
+    width: calc(100% - 150px);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+nav{
+    width: 80%;
+    margin: 0 auto;
+}
+li{
+    width: 100%;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav a{
+    display: block;
+    width: 100%;
+    color: var(--text-scondary);
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+    margin-bottom: 5px;
+}
+nav span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    margin-right: 90px;
+}
+nav .perfil span{
+    background-image: url('https://img.icons8.com/ios-glyphs/60/ffffff/user-male-circle.png');
+}
