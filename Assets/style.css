@@ -4,15 +4,17 @@
     padding: 0;
 }
 :root{
-    --primary: #1e2e42ed;
-    --secondary: #071529;
+    --primary: #111923;
+    --secondary: #050e1b;
     --text-primary: #fbfbfb;
     --text-scondary: #c0bfbf;
+    --botones: #39afda;
 }
 html{
     font-family: 'Roboto', sans-serif;
     font-size: 63.5%;
     scroll-behavior: smooth;
+    list-style: none;
 }
 .fondo{
     position: fixed;
@@ -37,11 +39,9 @@ header{
     align-content: center;
     padding: 0 10px;
     box-shadow: 0px 0px 18px 1px var(--secondary);
-    /* overflow-y: scroll;
-     */
 }
 .header-container{
-    padding: 30px 0;
+    padding: 30px 0 50px;
 }
 header .top{
     text-align: center;
@@ -68,10 +68,6 @@ nav{
     width: 90%;
     margin: 0 auto;
 }
-li{
-    width: 100%;
-    list-style: none;
-}
 a{
     text-decoration: none;
 }
@@ -80,11 +76,11 @@ nav a{
     width: 100%;
     color: var(--text-scondary);
     font-size: 1.5rem;
-    width: 100%;
     padding: 12px 10px;
     border-radius: 5px;
     background-color: var(--secondary);
     margin-bottom: 2px;
+    transition: all 350ms;
 }
 nav span{
     display: inline-block;
@@ -107,6 +103,9 @@ nav .sobremi{
 }
 nav .contacto{
     background-image: url('https://img.icons8.com/pastel-glyph/64/ffffff/new-message--v1.png');
+}
+nav a:hover{
+    background-color: #7e99ba;
 }
 header .bottom{
     margin-top: 20px;
@@ -143,7 +142,54 @@ main{
 .section-perfil{
     width: 100%;
     height: 100vh;
-    background-color: #f2f4f7;
+    background-color: #00000078;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-perfil h1{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+.section-perfil .micv{
+    display: block;
+    width: 280px;
+    margin: 0 auto 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--botones);
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: #071529;
+}
+.section-perfil p{
+    color: var(--text-scondary);
+    width: 90%;
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.buttom-contact{
+    width: 150px;
+    margin: 0 auto;
+    background-color: var(--botones);
+    font-size: 1.8rem;
+    padding: 10px;
+    color: #071529;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.buttonpre:hover{
+    background-color: #8dd5ef;
+    transition: all 350ms;
+}
+.buttonpre:active{
+    background-color: rgb(16, 71, 138);
+    transition: all 350ms;
 }
 .section-portafolio{
     width: 100%;
@@ -178,7 +224,16 @@ main{
         overscroll-behavior-y: auto;
     }
 }
+@media (max-height: 600px){
+    .section-perfil {
+        padding: 30px;
+        height: auto;
+    }
+}
 @media (max-width: 950px) {
+    .section-perfil p{
+        font-size: 1.8rem;
+    }
     header {
         transform: translate(-320px);
         transition: all 450ms;
@@ -187,10 +242,6 @@ main{
         left: 0;
         width: 100%;
         overflow-x: hidden;
-    }
-    #btn-check:checked ~ .main-container{
-        transition: all 450ms; 
-        transform: translate(320px);
     }
     .menu-check{
         display: block;
@@ -205,7 +256,14 @@ main{
         transition: all 450ms;
     }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+    .section-perfil h1{
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .section-perfil p{
+        font-size: 1.4rem;
+    }
     #btn-check:checked ~ header > div > label{
         transform: translateX(-320px);
     }
