@@ -4,24 +4,36 @@
     padding: 0;
 }
 :root{
-    --primary: #232524;
-    --secondary: #191A1E;
+    --primary: #1e2e42ed;
+    --secondary: #071529;
     --text-primary: #fbfbfb;
     --text-scondary: #c0bfbf;
 }
 html{
     font-family: 'Roboto', sans-serif;
     font-size: 63.5%;
+    scroll-behavior: smooth;
+}
+.fondo{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.fondo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 header{
-    width: 25%;
-    min-width: 320px;
+    width: 320px;
     height: 100vh;
     position: fixed;
     background-color: var(--primary);
     display: grid;
     align-content: center;
     padding: 0 10px;
+    box-shadow: 0px 0px 18px 1px var(--secondary);
 }
 header .top{
     text-align: center;
@@ -45,7 +57,7 @@ header .fotoperfil{
     border-radius: 10px;
 }
 nav{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 li{
@@ -61,21 +73,82 @@ nav a{
     color: var(--text-scondary);
     font-size: 1.5rem;
     width: 100%;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 12px 10px;
+    border-radius: 5px;
     background-color: var(--secondary);
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 nav span{
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     vertical-align: middle;
     margin-right: 90px;
 }
-nav .perfil span{
+nav .perfil{
     background-image: url('https://img.icons8.com/ios-glyphs/60/ffffff/user-male-circle.png');
+}
+nav .portafolio{
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/portfolio.png');
+}
+nav .sobremi{
+    background-image: url('https://img.icons8.com/ios-glyphs/30/ffffff/about.png');
+}
+nav .contacto{
+    background-image: url('https://img.icons8.com/pastel-glyph/64/ffffff/new-message--v1.png');
+}
+header .bottom{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.social{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.Facebook{
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/facebook--v1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+}
+.Linkedin{
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/linkedin.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.instagram{
+    background-image: url('https://img.icons8.com/ios-filled/50/ffffff/instagram-new--v1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+main{
+    width: calc(100% - 320px);
+    position: absolute;
+    right: 0;
+}
+.section-perfil{
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f4f7;
+}
+.section-portafolio{
+    width: 100%;
+    height: 100vh;
+    background-color: #d5dbe3;
+}
+.section-about{
+    width: 100%;
+    height: 100vh;
+    background-color: #bac2cc;
+}
+.section-contact{
+    width: 100%;
+    height: 100vh;
+    background-color: #cfd7e1;
 }
