@@ -29,11 +29,19 @@ header{
     width: 320px;
     height: 100vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-color: var(--primary);
     display: grid;
     align-content: center;
     padding: 0 10px;
     box-shadow: 0px 0px 18px 1px var(--secondary);
+    /* overflow-y: scroll;
+     */
+}
+.header-container{
+    padding: 30px 0;
 }
 header .top{
     text-align: center;
@@ -130,7 +138,7 @@ header .bottom{
 main{
     width: calc(100% - 320px);
     position: absolute;
-    right: 0;
+    left: 320px;
 }
 .section-perfil{
     width: 100%;
@@ -151,4 +159,54 @@ main{
     width: 100%;
     height: 100vh;
     background-color: #cfd7e1;
+}
+.checkin{
+    display: none;
+}
+.menu-check{
+    display: none;
+}
+.menu-check img{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+@media (max-height: 650px){
+    .header-container{
+        overflow-y: scroll;
+        overscroll-behavior-y: auto;
+    }
+}
+@media (max-width: 950px) {
+    header {
+        transform: translate(-320px);
+        transition: all 450ms;
+    }
+    main{
+        left: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #btn-check:checked ~ .main-container{
+        transition: all 450ms; 
+        transform: translate(320px);
+    }
+    .menu-check{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 335px;
+        transition: transform 450ms;
+        cursor: pointer;
+    }
+    #btn-check:checked ~ header{
+        transform: translateX(0px);
+        transition: all 450ms;
+    }
+}
+@media (max-width: 400px) {
+    #btn-check:checked ~ header > div > label{
+        transform: translateX(-320px);
+    }
 }
