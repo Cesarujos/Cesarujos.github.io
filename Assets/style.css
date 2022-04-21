@@ -7,7 +7,7 @@
     --primary: #111923;
     --secondary: #050e1b;
     --text-primary: #fbfbfb;
-    --text-scondary: #c0bfbf;
+    --text-scondary: #e5e5e5;
     --botones: #39afda;
 }
 html{
@@ -142,7 +142,7 @@ main{
 .section-perfil{
     width: 100%;
     height: 100vh;
-    background-color: #00000078;
+    background-color: #000000b7;
     color: aliceblue;
     text-align: center;
     display: flex;
