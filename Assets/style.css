@@ -204,7 +204,7 @@ main{
 .section-contact{
     width: 100%;
     height: 100vh;
-    background-color: #cfd7e1;
+    background-color: #000000e2;
 }
 .checkin{
     display: none;
@@ -267,4 +267,42 @@ main{
     #btn-check:checked ~ header > div > label{
         transform: translateX(-320px);
     }
+}
+
+.form-container{
+    height: auto;
+    width: 80%;
+    background-color: var(--primary);
+    padding: 30px 10px;
+    color: var(--text-primary);
+    font-size: 1.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 30px 0px #ffffff37;
+}
+.secciones{
+    position: relative;
+}
+.contact-form label, .contact-form input, .contact-form textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact-form input{
+    padding: 10px;
+    border-radius: 1px solid var(--secondary);
+    border-radius: 10px;
+    background-color: var(--text-primary);
+}
+.title-form{
+    text-align: center;
+    font-size: 2.4rem;
+    color: #b5bdc7;
+}
+.contact-form input[type = 'submit']{
+    background-color: var(--text-scondary);
+    color: rgb(11, 11, 11);
+    font-size: 2rem;
 }
